@@ -33,5 +33,12 @@
     "description": "Trusted weapon at your side",
     "category": "Fantasy weapon",
     "price": 2000
+  },
+  {
+    "id": 6,
+    "name": "Blaster",
+    "description": "Trusted weapon at your side",
+    "category": "Fantasy weapon",
+    "price": 2000
   }
 ]
