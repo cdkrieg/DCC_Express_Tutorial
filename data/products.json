@@ -29,13 +29,6 @@
   },
   {
     "id": 5,
-    "name": "Lightsaber",
-    "description": "A more elegant weapon for a civilized age",
-    "category": "Fantasy weapon",
-    "price": 1000
-  },
-  {
-    "id": 6,
     "name": "Blaster",
     "description": "Trusted weapon at your side",
     "category": "Fantasy weapon",

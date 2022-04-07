@@ -1,4 +1,5 @@
 const express = require("express");
+const { deleteProduct } = require("./repository/products-repository");
 const repoContext = require("./repository/repository-wrapper");
 const app = express();
 
@@ -24,6 +25,19 @@ app.post("/api/products", (req,res) => {
     const newProduct = req.body;
     const addedProduct = repoContext.products.createProduct(newProduct);
     return res.status(201).send(addedProduct);
+})
+
+app.put("/api/products/:id", (req,res) => {
+    const id = parseInt(req.params.id);
+    const productPropertiesToModify = req.body;
+    const productToUpdate = repoContext.products.updateProduct(id, productPropertiesToModify);
+    return  res.send(productToUpdate);
+})
+
+app.delete("/api/products/:id", (req,res) => {
+    const id = parseInt(req.params.id);
+    const deletedProduct = repoContext.products.deleteProduct(id);
+    return res.send(deletedProduct);
 })
 
 // Starting a server
